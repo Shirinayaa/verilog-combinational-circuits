@@ -121,6 +121,8 @@ Testbenches:
 2:1 Multiplexer simulation waveform generated using GTKWave.
 
 [MUX 2:1 Waveform](screenshots/mux_2x1_waveform.png)
+
+4:1 Multiplexer simulation waveform generated using GTKWave.
 [MUX 4:1 Waveform](screenshots/mux_4x1_waveform.png)
 
 ---
