@@ -102,17 +102,56 @@ Selection:
 
 The 4:1 MUX extends the concept of a 2:1 MUX by using two select lines to choose between four inputs.
 
+# 1:2 Demultiplexer (DEMUX)
+
+Logic:
+
+Y0 = ~S & I
+
+Y1 = S & I
+
+Truth Table:
+
+| S | I | Y0 | Y1 |
+| - | - | -- | -- |
+| 0 | 0 | 0  | 0  |
+| 0 | 1 | 1  | 0  |
+| 1 | 0 | 0  | 0  |
+| 1 | 1 | 0  | 1  |
+
+### Description
+
+A 1:2 Demultiplexer (DEMUX) is a combinational circuit that routes a single input to one of multiple outputs based on the value of the select line.
+
+Inputs:
+
+* I
+* S (Select Line)
+
+Outputs:
+
+* Y0
+* Y1
+
+When S = 0, the input is routed to Y0.
+
+When S = 1, the input is routed to Y1.
+
+A DEMUX performs the opposite function of a Multiplexer (MUX), which selects one input and forwards it to a single output.
+
 ---
 
 # Files
 
 * mux_2x1.v
 * mux_4x1.v
+* demux_1x2.v
 
 Testbenches:
 
 * mux_2x1_tb.v
 * mux_4x1_tb.v
+* demux_1x2_tb.v
 
 ---
 
@@ -125,6 +164,11 @@ Testbenches:
 4:1 Multiplexer simulation waveform generated using GTKWave.
 
 [MUX 4:1 Waveform](screenshots/mux_4x1_waveform.png)
+
+4:1 Multiplexer simulation waveform generated using GTKWave.
+
+[MUX 4:1 Waveform](screenshots/mux_4x1_waveform.png)
+
 
 ---
 
@@ -155,12 +199,13 @@ Testbenches:
 * Binary Literals
 * Case Statements
 * Self-Checking Testbenches
+* Demultiplexer Design
+* Data Routing
 
 ---
 
 # Future Work
 
-* 1:2 Demultiplexer
 * Encoder
 * Priority Encoder
 * Decoder
